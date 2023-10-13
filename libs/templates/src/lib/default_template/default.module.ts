@@ -7,6 +7,9 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 })
 export class DefaultTemplateModule {
   static forRoot(): ModuleWithProviders<DefaultTemplateModule> {
-
+    return {
+      ngModule: DefaultTemplateModule,
+      providers: [],
+    };
   }
 }
