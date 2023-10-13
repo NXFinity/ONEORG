@@ -31,7 +31,7 @@ Below is a list of folders and files in our project:
   - `./docs`: We've documented our project to help you get started.  
 You can either click on the link above or execute the following command to view our documentation:
 ```bash
-npm start hads
+npm run start:hads
 ```
 - `./libs`: How we've named our libraries, is dependent on the type of library being used.  
 As an example, our Angular Template Library is named `./libs/templates`.  
