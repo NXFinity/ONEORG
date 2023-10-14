@@ -1,12 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ModuleWithProviders, NgModule } from '@angular/core';
+import { TitleService } from './services/title.service';
 
 
-
+const themeServices = [
+  TitleService,
+];
 @NgModule({
+  imports: [],
   declarations: [],
-  imports: [
-    CommonModule
-  ]
+  exports: [],
 })
-export class DefaultTemplateModule { }
+export class DefaultTemplateModule {
+  static forRoot(): ModuleWithProviders<DefaultTemplateModule> {
+    return {
+      ngModule: DefaultTemplateModule,
+      providers: [
+        ...themeServices,
+      ],
+    };
+  }
+}
