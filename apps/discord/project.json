@@ -11,7 +11,7 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/discord",
+        "outputPath": "backend/discord",
         "main": "apps/discord/src/main.ts",
         "tsConfig": "apps/discord/tsconfig.app.json",
         "assets": ["apps/discord/src/assets"],
@@ -56,6 +56,24 @@
         "ci": {
           "ci": true,
           "codeCoverage": true
+        }
+      }
+    },
+    "container": {
+      "executor": "@nx-tools/nx-container:build",
+      "dependsOn": ["build"],
+      "options": {
+        "engine": "docker",
+        "metadata": {
+          "images": ["undefined/discord"],
+          "load": true,
+          "tags": [
+            "type=schedule",
+            "type=ref,event=branch",
+            "type=ref,event=tag",
+            "type=ref,event=pr",
+            "type=sha,prefix=sha-"
+          ]
         }
       }
     }

@@ -6,6 +6,9 @@ tmp
 /out-tsc
 /env
 .env
+/www
+/backend
+/desktop
 # dependencies
 node_modules
 

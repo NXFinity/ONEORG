@@ -11,7 +11,7 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/server",
+        "outputPath": "backend/server",
         "main": "server/src/main.ts",
         "tsConfig": "server/tsconfig.app.json",
         "assets": ["server/src/assets"],
@@ -56,6 +56,24 @@
         "ci": {
           "ci": true,
           "codeCoverage": true
+        }
+      }
+    },
+    "container": {
+      "executor": "@nx-tools/nx-container:build",
+      "dependsOn": ["build"],
+      "options": {
+        "engine": "docker",
+        "metadata": {
+          "images": ["undefined/server"],
+          "load": true,
+          "tags": [
+            "type=schedule",
+            "type=ref,event=branch",
+            "type=ref,event=tag",
+            "type=ref,event=pr",
+            "type=sha,prefix=sha-"
+          ]
         }
       }
     }
