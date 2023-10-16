@@ -18,7 +18,9 @@ Below is a list of documents available in our project:
 
 All our docs can be found in the `./docs` folder.
 
-- [Index](./docs/index.md): This document will help you get started with our project.
+- [Index](./docs/index.md):
+  - [Introduction](./docs/introduction.md)
+  - [Getting Started](./docs/getting_started/getting_started.md)
 
 Feel free to explore these documents to learn more about our project and get started with using our software.
 
