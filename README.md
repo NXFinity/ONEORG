@@ -20,7 +20,8 @@ All our docs can be found in the `./docs` folder.
 
 - [Index](./docs/index.md):
   - [Introduction](./docs/introduction.md)
-  - [Getting Started](./docs/getting_started/getting_started.md)
+    - [Getting Started](./docs/getting_started/getting_started.md)
+    - [Installation](./docs/getting_started/installation.md)
 
 Feel free to explore these documents to learn more about our project and get started with using our software.
 
