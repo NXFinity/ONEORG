@@ -20,6 +20,7 @@ All our docs can be found in the `./docs` folder.
 
 - [Index](./docs/index.md):
   - [Introduction](./docs/introduction.md)
+  - [Road Map](./docs/roadmap.md)
     - [Getting Started](./docs/getting_started/getting_started.md)
     - [Installation](./docs/getting_started/installation.md)
 
