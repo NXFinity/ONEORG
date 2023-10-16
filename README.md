@@ -10,7 +10,7 @@ With our cutting-edge technology and innovative solutions, we are at the forefro
 
 Join us on this exciting journey as we shape the future of industries. Together, we can unlock limitless possibilities and unleash the true potential of collaboration and innovation.
 
-![Image](./assets/images/product/fp_1.PNG)
+![Image](./assets/images/logos/oneorg_light.png)
 
 # Document List
 

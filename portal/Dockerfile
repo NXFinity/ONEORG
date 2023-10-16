@@ -1,4 +1,7 @@
-FROM docker.io/nginx:stable-alpine
-COPY  dist/apps/portal/* /usr/share/nginx/html/
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+FROM nginx:alpine
+LABEL version="1.0.0"
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
+WORKDIR /usr/share/nginx/html
+COPY www .
