@@ -33,7 +33,7 @@ export class TitleService {
       }
 
       const title = titles.join(' ');
-      this.titleService.setTitle(title ? `ONE: ${title}` : 'ORG');
+      this.titleService.setTitle(title ? `NX: ${title}` : 'NXFINITY');
     });
   }
 }

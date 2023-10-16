@@ -10,27 +10,39 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "allowedCommonJsDependencies": [
+          "lodash", "lity", "jquery", "quill", "bezier-easing", "ev-emitter", "moment", "apexcharts", "jsvectormap"
+        ],
         "outputPath": "www",
         "index": "portal/src/index.html",
         "main": "portal/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "portal/tsconfig.app.json",
         "assets": ["portal/src/favicon.ico", "portal/src/assets"],
-        "styles": ["portal/src/styles.scss"],
-        "scripts": []
+        "styles": ["libs/templates/src/lib/default-template/styles/styles.scss", "libs/templates/src/lib/default-template/styles/tailwind.scss"],
+        "scripts": [
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+        ]
       },
       "configurations": {
         "production": {
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "15mb",
+              "maximumError": "10mb"
             },
             {
               "type": "anyComponentStyle",
-              "maximumWarning": "2kb",
-              "maximumError": "4kb"
+              "maximumWarning": "15mb",
+              "maximumError": "10mb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "libs/core/src/lib/environments/environment.ts",
+              "with": "libs/core/src/lib/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -190,7 +202,7 @@
       "options": {
         "engine": "docker",
         "metadata": {
-          "images": ["undefined/portal"],
+          "images": ["oneorg/portal"],
           "load": true,
           "tags": [
             "type=schedule",
@@ -200,6 +212,12 @@
             "type=sha,prefix=sha-"
           ]
         }
+      }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-docker:deploy",
+      "options": {
+        "account": "oneorg"
       }
     }
   }

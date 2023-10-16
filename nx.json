@@ -61,7 +61,5 @@
       "style": "scss"
     }
   },
-  "plugins": [
-    "@nxlv/python"
-  ]
+  "plugins": ["@nxlv/python"]
 }

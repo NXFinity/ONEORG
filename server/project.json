@@ -65,7 +65,7 @@
       "options": {
         "engine": "docker",
         "metadata": {
-          "images": ["undefined/server"],
+          "images": ["oneorg/server"],
           "load": true,
           "tags": [
             "type=schedule",

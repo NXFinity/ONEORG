@@ -65,7 +65,7 @@
       "options": {
         "engine": "docker",
         "metadata": {
-          "images": ["undefined/discord"],
+          "images": ["oneorg/discord"],
           "load": true,
           "tags": [
             "type=schedule",

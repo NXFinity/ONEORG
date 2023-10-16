@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@one/authentication": ["libs/authentication/src/index.ts"],
       "@one/authority": ["libs/authority/src/index.ts"],
+      "@one/core": ["libs/core/src/index.ts"],
       "@one/database": ["libs/database/src/index.ts"],
       "@one/templates": ["libs/templates/src/index.ts"]
     }
